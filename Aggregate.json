@@ -1,0 +1,62 @@
+[
+  {
+    "Year": 2013,
+    "Australia-Pop": 23.3,
+    "Africa-Pop": 53.16,
+    "Asia-Pop": 504.36999999999995,
+    "Europe-Pop": 82.38,
+    "North_America-Pop": 156.75,
+    "South_America-Pop": 121.61500000000001,
+    "Australia-GDP": 1497.22,
+    "Africa-GDP": 366.24,
+    "Asia-GDP": 2990.4066666666663,
+    "Europe-GDP": 2690.528,
+    "North_America-GDP": 6587.990000000001,
+    "South_America-GDP": 1506.54
+  },
+  {
+    "Year": 2010,
+    "Australia-Pop": 22.17,
+    "Africa-Pop": 50.79,
+    "Asia-Pop": 585.844,
+    "Europe-Pop": 81.774,
+    "North_America-Pop": 91.602,
+    "South_America-Pop": 47.257999999999996,
+    "Australia-GDP": 1244.97,
+    "Africa-GDP": 375.3,
+    "Asia-GDP": 2905.76,
+    "Europe-GDP": 2427.62,
+    "North_America-GDP": 3525.9199999999996,
+    "South_America-GDP": 534.184
+  },
+  {
+    "Year": 2011,
+    "Australia-Pop": 22.52,
+    "Africa-Pop": 51.55,
+    "Asia-Pop": 592.612,
+    "Europe-Pop": 81.792,
+    "North_America-Pop": 92.414,
+    "South_America-Pop": 47.732,
+    "Australia-GDP": 1499.95,
+    "Africa-GDP": 417.06,
+    "Asia-GDP": 3361.328,
+    "Europe-GDP": 2681,
+    "North_America-GDP": 3695.572,
+    "South_America-GDP": 634.348
+  },
+  {
+    "Year": 2012,
+    "Australia-Pop": 22.92,
+    "Africa-Pop": 52.34,
+    "Asia-Pop": 599.856,
+    "Europe-Pop": 82.06,
+    "North_America-Pop": 93.232,
+    "South_America-Pop": 48.194,
+    "Australia-GDP": 1555.26,
+    "Africa-GDP": 397.39,
+    "Asia-GDP": 3581.5080000000003,
+    "Europe-GDP": 2588.158,
+    "North_America-GDP": 3834.9139999999998,
+    "South_America-GDP": 603.924
+  }
+]
