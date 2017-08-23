@@ -64,16 +64,16 @@ var svg = d3.select("body").append("svg")
 
 
 // load the data
-d3.json("GDP.json", function(error, data) {
+d3.json("../json/Population.json", function(error, data) {
 
     data.forEach(function(d) {
         d.Country = d.Country;
-        d.GDP = +d.GDP;
+        d.Population = +d.Population;
     });
 	
   // scale the range of the data
   x.domain(data.map(function(d) { return d.Country; }));
-  y.domain([0, d3.max(data, function(d) { return d.GDP+2000; })]);
+  y.domain([0, d3.max(data, function(d) { return d.Population+100; })]);
 
   // add axis
   svg.append("g")
@@ -91,10 +91,10 @@ d3.json("GDP.json", function(error, data) {
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 5)
+      .attr("y", 2)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("GDP");
+      .text("Population");
 
 
   // Add bar chart
@@ -104,8 +104,8 @@ d3.json("GDP.json", function(error, data) {
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.Country); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.GDP); })
-      .attr("height", function(d) { return height - y(d.GDP); });
+      .attr("y", function(d) { return y(d.Population); })
+      .attr("height", function(d) { return height - y(d.Population); });
 
 });
 

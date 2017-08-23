@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 
 <head>
-	<style>
+  <style>
 
   .bar{
     fill: steelblue;
@@ -12,22 +12,24 @@
     fill: brown;
   }
 
-	.axis {
-	  font: 10px sans-serif;
-	}
+  .axis {
+    font: 10px sans-serif;
+  }
 
-	.axis path,
-	.axis line {
-	  fill: none;
-	  stroke: #000;
-	  shape-rendering: crispEdges;
-	}
-
-	</style>
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  svg{
+    background-color: "#f0f0f0"
+  }
+  </style>
 </head>
 
 <body>
-	
+  
 <script src="http://d3js.org/d3.v3.min.js"></script>
 
 <script>
@@ -44,7 +46,7 @@ var y = d3.scale.linear().range([height, 0]);
 
 // define the axis
 var xAxis = d3.svg.axis()
-    .scale(x	)
+    .scale(x  )
     .orient("bottom")
 
 
@@ -64,16 +66,16 @@ var svg = d3.select("body").append("svg")
 
 
 // load the data
-d3.json("Purchasing.json", function(error, data) {
+d3.json("../json/GDP.json", function(error, data) {
 
     data.forEach(function(d) {
         d.Country = d.Country;
-        d.Purchase = +d.Purchase;
+        d.GDP = +d.GDP;
     });
-	
+  
   // scale the range of the data
   x.domain(data.map(function(d) { return d.Country; }));
-  y.domain([0, d3.max(data, function(d) { return d.Purchase+1000; })]);
+  y.domain([0, d3.max(data, function(d) { return d.GDP+100; })]);
 
   // add axis
   svg.append("g")
@@ -91,10 +93,10 @@ d3.json("Purchasing.json", function(error, data) {
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 5)
+      .attr("y", 2)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Purchasing Power");
+      .text("GDP");
 
 
   // Add bar chart
@@ -104,8 +106,8 @@ d3.json("Purchasing.json", function(error, data) {
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.Country); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.Purchase); })
-      .attr("height", function(d) { return height - y(d.Purchase); });
+      .attr("y", function(d) { return y(d.GDP); })
+      .attr("height", function(d) { return height - y(d.GDP); });
 
 });
 
