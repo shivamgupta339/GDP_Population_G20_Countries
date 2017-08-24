@@ -18,7 +18,7 @@ rl.on('line',(line) => {
 	jsonFromLine.Country = arr[0].replace(/['"]+/g, '');				//copying country name from array into object
 	GDP.Country = arr[0].replace(/['"]+/g, '');
 	Purchase.Country = arr[0].replace(/['"]+/g, '');
-	var getvalue=(index)=>{
+	let getvalue=(index)=>{
 		return parseFloat(arr[index].replace(/['"]+/g, ''))
 	}
 	if(count!=0){
